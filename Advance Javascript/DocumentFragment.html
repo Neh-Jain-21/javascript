@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myid">
+        <h1>Hi</h1>
+    </div>
+    <script>
+        //create fragment
+        var df=document.createDocumentFragment();
+
+        //create element
+        var h2=document.createElement("h2");
+
+        //create element
+        var p=document.createElement("p");
+
+        //adding text
+        h2.textContent="this is h2";
+        p.textContent="this is p";
+
+        //getting div element
+        var target=document.getElementById("myid");
+
+        //Appending
+        df.appendChild(h2);
+        df.appendChild(p);
+
+        //last
+        target.appendChild(df);
+    </script>
+</body>
+</html>

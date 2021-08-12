@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>JS Framework</h3>
+        <ul id="myul">
+            <li>Jquery</li>
+            <li>Node js</li>
+            <li>React js</li>
+            <li>Angular js</li>
+        </ul>
+    </div>
+    <div id="mydiv1">
+
+    </div>
+    <div id="mydiv2">
+
+    </div>
+    <script>
+        var u=document.getElementById("myul");
+
+        var duplicateNode1=u.cloneNode(true);
+        var mydiv1=document.getElementById("mydiv1");
+        mydiv1.appendChild(duplicateNode1);
+
+        var duplicateNode2=u.cloneNode(false);
+        var mydiv2=document.getElementById("mydiv2");
+        mydiv2.appendChild(duplicateNode2);
+        console.log(duplicateNode2);
+    </script>
+</body>
+</html>

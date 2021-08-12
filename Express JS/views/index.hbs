@@ -1,0 +1,111 @@
+<html>
+<head> 
+<style type="text/css">
+	.ripple 
+	{
+        background-position: center;
+        transition: background 0.8s;
+    }
+    .ripple:hover {
+        background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+    }
+    .ripple:active {
+        background-color: #6eb9f7;
+        background-size: 100%;
+        transition: background 0s;
+    }
+    input
+    {
+    	border: none;
+        width: 100%;
+        border-radius: 2px;
+        padding: 12px 18px;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: white;
+        background-color: #2196f3;
+        box-shadow: 0 0 4px #999;
+        outline: none;
+    }
+    table
+    {
+       	border: none;
+    }
+    h1
+    {
+       	animation: blink 4s infinite;
+       	color: #2196f3;
+       	font-size: 50px;
+    }
+    @keyframes blink
+    {
+      	0%
+       	{
+       		opacity: 1;
+       	}
+        50%
+        {
+            opacity: 0.8;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+</style>
+<script> 		 		
+function a(value)
+{ 			            
+	document.getElementById('result').value+=value; 		
+} 		
+function solve()
+{ 			
+	var value1= document.getElementById('result').value; 			
+	let res = eval(value1); 			
+	document.getElementById('result').value=res;
+} 		
+function b()
+{ 		
+	document.getElementById('result').value=""; 	
+} 			 
+</script> 	
+</head>
+<body>
+{{>partials}}
+<h1 align="center">{{Name}} Calculator</h1>
+<div align="center" style="padding-top:5%"> 	
+<table> 		
+<tr> 			
+<td colspan="3">
+<input type="text" id="result"></td> 	
+<td><input class="ripple" type="button" value="Clear" onClick="b()"></td> 		
+</tr> 		
+<tr> 			
+<td><input class="ripple" type="button" value="1" onClick="a('1')"></td> 			
+<td><input class="ripple" type="button" value="2" onClick="a('2')"></td> 			
+<td><input class="ripple" type="button" value="3" onClick="a('3')"></td> 			
+<td><input class="ripple" type="button" value="+" onClick="a('+')"></td> 		
+</tr> 		
+<tr> 			
+<td><input class="ripple" type="button" value="4" onClick="a('4')"></td> 			
+<td><input class="ripple" type="button" value="5" onClick="a('5')"></td> 			
+<td><input class="ripple" type="button" value="6" onClick="a('6')"></td> 			
+<td><input class="ripple" type="button" value="-" onClick="a('-')"></td> 		
+</tr> 		
+<tr> 			
+<td><input class="ripple" type="button" value="7" onClick="a('7')"></td> 			
+<td><input class="ripple" type="button" value="8" onClick="a('8')"></td> 			
+<td><input class="ripple" type="button" value="9" onClick="a('9')"></td> 			
+<td><input class="ripple" type="button" value="/" onClick="a('/')"></td> 		
+</tr> 		
+<tr> 			
+<td><input class="ripple" type="button" value="." onClick="a('.')"></td> 		
+<td><input class="ripple" type="button" value="0" onClick="a('0')"></td> 			
+<td><input class="ripple" type="button" value="=" onClick="solve()"></td> 			
+<td><input class="ripple" type="button" value="*" onClick="a('*')"></td> 		
+</tr> 
+</table> 
+</div> 
+</body> 
+</html>

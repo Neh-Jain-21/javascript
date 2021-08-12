@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myid">
+        <h1>Hi</h1>
+    </div>
+    <script>
+        //create Element
+        var create=document.createElement("h2");
+
+        //getting div element
+        var target=document.getElementById("myid");
+
+        //Appending
+        target.append(create);
+        create.textContent="Welcome";
+
+        console.log(target);
+    </script>
+</body>
+</html>

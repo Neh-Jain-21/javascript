@@ -1,0 +1,91 @@
+/** @format */
+
+* {
+    transition: 0.5s;
+}
+
+body {
+    background-color: #040723;
+}
+
+.container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+input {
+    height: auto;
+    width: 90%;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 5px;
+    padding-top: 20px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+span {
+    width: 90%;
+    padding-top: 10px;
+}
+
+.todo-btn {
+    height: auto;
+    border: none;
+    background-color: white;
+    font-weight: bolder;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    color: black;
+    width: 22em;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    animation: fade 1s linear;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+img {
+    height: 27px;
+}
+
+.final-btn {
+    margin-top: 50px;
+    height: 30px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+}
+
+.final-btn:hover {
+    background-color: red;
+}
+
+.final-btn:focus {
+    background-color: red;
+}

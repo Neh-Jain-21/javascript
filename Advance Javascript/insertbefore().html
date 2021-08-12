@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>JS Framework</h3>
+        <ul id="myul">
+            <li>Jquery</li>
+            <li id="mynd">Node js</li>
+            <li>React js</li>
+            <li id="myan">Angular js</li>
+        </ul>
+    </div>
+    <script>
+        //parent node
+        var parentNode=document.getElementById("myul");
+        //create new node
+        var newNode=document.createElement("li");
+        newNode.textContent="Vue js";
+        //reference node
+        var refNode=document.getElementById("mynd");
+        //insert
+        parentNode.insertBefore(newNode,refNode);
+    </script>
+</body>
+</html>

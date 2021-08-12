@@ -1,0 +1,40 @@
+/** @format */
+
+// Advantages of SASS
+// 1. operators
+// 2. variables
+// 3. nesting
+// 4. mixin & can pass parameters
+// 5. Partials
+
+@import "var";
+@import "mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main_header {
+    @include flexprob();
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+
+    h1 {
+        color: red;
+        @include size(3);
+        &:hover {
+            color: white;
+        }
+    }
+
+    p {
+        color: red;
+        @include size(1);
+        &:hover {
+            color: white;
+        }
+    }
+}
