@@ -1,11 +1,15 @@
 /** @format */
-const { Op, DataTypes } = require("sequelize");
-const sequelize = require("../db/conn");
-const express = require("express");
-const router = express.Router();
+
+//import models and sequelize package
+const { sequelize, Sequelize } = require("../models/index");
+const { Op, DataTypes } = Sequelize;
+//import each model for DB Operations
 const User = require("../models/user")(sequelize, DataTypes);
 const Work = require("../models/work")(sequelize, DataTypes);
 const Company = require("../models/company")(sequelize, DataTypes);
+//express library
+const express = require("express");
+const router = express.Router();
 
 //register user
 router.post("/setUser", async (req, res) => {
